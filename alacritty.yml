@@ -171,36 +171,42 @@
 #draw_bold_text_with_bright_colors: false
 # 
 #
-# Colors (Gruvbox light)
+ # Base16 Grayscale Light - alacritty color config
+# Alexandre Gavioli (https://github.com/Alexx2/)
  colors:
-  # Default colors
-  primary:
-    # hard contrast: background = '0xf9f5d7'
-    background: '0xf2e5bc'
-    # soft contrast: background = '0xf2e5bc'
-    foreground: '0x3c3836'
+   # Default colors
+   primary:
+     background: '0xf7f7f7'
+     foreground: '0x464646'
 
-  # Normal colors
-  normal:
-    black:   '0xfbf1c7'
-    red:     '0xcc241d'
-    green:   '0x98971a'
-    yellow:  '0xd79921'
-    blue:    '0x458588'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0x7c6f64'
+   # Colors the cursor will use if `custom_cursor_colors` is true
+   cursor:
+     text: '0xf7f7f7'
+     cursor: '0x464646'
 
-  # Bright colors
-  bright:
-    black:   '0x928374'
-    red:     '0x9d0006'
-    green:   '0x79740e'
-    yellow:  '0xb57614'
-    blue:    '0x076678'
-    magenta: '0x8f3f71'
-    cyan:    '0x427b58'
-    white:   '0x3c3836'
+   # Normal colors
+   normal:
+     black:   '0xfcfcfc'
+     red:     '0x7c7c7c'
+     green:   '0x8e8e8e'
+     yellow:  '0xa0a0a0'
+     blue:    '0x686868'
+     magenta: '0x747474'
+     cyan:    '0x868686'
+     white:   '0x0d0d0d'
+
+   # Bright colors
+   bright:
+     black:   '0xababab'
+     red:     '0x999999'
+     green:   '0xe3e3e3'
+     yellow:  '0xb9b9b9'
+     blue:    '0x525252'
+     magenta: '0x252525'
+     cyan:    '0x5e5e5e'
+     white:   '0x000000'
+
+ draw_bold_text_with_bright_colors: false
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -458,15 +464,15 @@
   #- { key: C,        mods: Control|Shift, action: Copy             }
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-  #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  #- { key: Add,      mods: Control,       action: IncreaseFontSize }
-  #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
-   - { key: N, mods: Command, action: SpawnNewInstance }
-   - { key: Equals,   mods: Command,       action: IncreaseFontSize              }
-   - { key: Minus,    mods: Command,       action: DecreaseFontSize              }
-   - { key: Minus,    mods: Command|Shift, action: ResetFontSize                 }
-   - { key: F,        mods: Command,       action: ToggleFullscreen}
+   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+   - { key: Add,      mods: Control,       action: IncreaseFontSize }
+   - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  #- { key: N, mods: Command, action: SpawnNewInstance }
+  #- { key: Equals,   mods: Command,       action: IncreaseFontSize              }
+  #- { key: Minus,    mods: Command,       action: DecreaseFontSize              }
+  #- { key: Minus,    mods: Command|Shift, action: ResetFontSize                 }
+  #- { key: F,        mods: Command,       action: ToggleFullscreen}
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
 

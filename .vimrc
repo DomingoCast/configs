@@ -18,7 +18,7 @@ set encoding=utf-8
 set cursorline     "highlight current line
 set cursorcolumn   "highlight current column
 
-set clipboard=unnamedplus
+"set clipboard=unnamedplus "misma clipboard vim y system
 " cambiar a dos para html
 "autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 highlight ColorColumn ctermbg = 0 guibg = lightgrey
@@ -33,10 +33,10 @@ imap ä <esc>:w<cr>
 
 imap ì <esc>:w<cr> 
 
-xmap <Leader>c "*y
-xmap <Leader>C "+y
-xmap <Leader>v "*p
-xmap <Leader>V "+p
+map <Leader>c "*y
+map <Leader>C "+y
+map <Leader>v "*p
+map <Leader>V "+p
 
 map <leader><tab> ^i<<esc>wv$yA></<esc>pA><esc>bbli
 map <leader>html i<!DOCTYPE html><cr><html><cr><head><cr><meta charset="utf-8"><cr><title></title><cr><backspace></head><cr><body><cr></body><cr><backspace></html><esc>gg
@@ -61,8 +61,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplition
 Plug 'preservim/nerdtree'           "sidebar for files
 Plug 'morhetz/gruvbox'              "colorscheme
-Plug 'phanviet/vim-monokai-pro'
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'        "status bar
+Plug 'vim-airline/vim-airline-themes' "status bar colortheme
 Plug 'flazz/vim-colorschemes'
 Plug 'turbio/bracey.vim'            "html server
 Plug 'preservim/nerdcommenter'      "comment sections of code
@@ -77,7 +77,8 @@ Plug 'dense-analysis/ale'           "linting
 "Plug 'sheerun/vim-polyglot'         "languages syntax
 Plug 'pangloss/vim-javascript'
 Plug 'arcticicestudio/nord-vim'     "nord colorscheme
-
+Plug 'ewilazarus/preto'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -90,7 +91,9 @@ au FileType css setlocal formatprg=prettier\ --parser\ css
 
 
 "colorscheme gruvbox
-colorscheme nord
+"colorscheme nord
+"colorscheme preto
+colorscheme base16-grayscale-light
 
 let g:bracey_refresh_on_save = 1
 let g:bracey_auto_start_server = 1
@@ -112,3 +115,6 @@ map <c-p> :Files<cr>
 "linting
 let g:ale_sign_column_always = 1
 let g:ale_set_balloons = 1
+
+"status bar
+let g:airline_theme='base16_grayscale'
