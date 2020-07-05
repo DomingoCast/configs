@@ -121,8 +121,9 @@ screens = [
                 widget.Sep(
                     background = colors["grey_dark"],
                     forground = colors["grey_dark"],
-                    padding = 20
-                    ), 
+                    padding = 20,
+                    linewidth = 0,
+                    ),
                 # widget.CurrentLayout(
                     # background = colors["white"]
                     # ),
@@ -133,8 +134,15 @@ screens = [
                     background = colors["grey_dark"],
                     foreground = colors["white"],
                     block_highlight_text_color = colors["grey_dark"],
-                    highlight_method = "line", 
+                    highlight_method = "line",
                     highlight_color = [colors["white"], colors["white"]]
+                    ),
+                widget.Sep(
+                    background = colors["grey_dark"],
+                    forground = colors["grey_dark"],
+                    padding = 1200,
+                    linewidth = 0,
+                    # size_percent = 100
                     ),
                 # widget.AGroupBox(
                     # background = colors['white']
@@ -160,13 +168,38 @@ screens = [
                         # background = colors[0]
                         # ),
                 widget.Prompt(background = colors["grey_dark"]),
+                widget.PulseVolume(                          #percentage volume
+                    background = colors["grey_dark"],
+                    ),
+                widget.Sep(
+                    background = colors["grey_dark"],
+                    forground = colors["grey_dark"],
+                    # size_percent = 100
+                    ),
+                widget.Battery(
+                    background = colors["grey_dark"],
+                    format = '{char} {percent:2.0%}'
+                    ),
+                widget.Sep(
+                    background = colors["grey_dark"],
+                    forground = colors["grey_dark"],
+                    # size_percent = 100
+                    ),
+                # widget.BatteryIcon(background = colors["grey_dark"]),
                 # widget.WindowName(background = colors["grey_dark"]),
                 # widget.TextBox("default config", name="default"),
-                widget.PulseVolume(),
-                # libqtile.widget.Volume(), 
+                # libqtile.widget.Volume(),
                 widget.Systray(background = colors["grey_dark"]),
                 widget.Clock(background = colors["grey_dark"], format='%Y-%m-%d %a %I:%M %p'),
                 # widget.QuickExit(background = colors["grey_dark"]),
+                widget.Sep(
+                    background = colors["grey_dark"],
+                    forground = colors["grey_dark"],
+                    linewidth = 0,
+                    padding = 20,
+
+                    # size_percent = 100
+                    ),
             ],
             24,
         ),
